@@ -1,0 +1,14 @@
+h1 Users
+
+table
+  thead
+    tr
+      | Users
+      th
+
+  tbody
+    - @users.each do |user|
+      tr
+        td = user.email
+
+
