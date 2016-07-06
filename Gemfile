@@ -17,14 +17,22 @@ gem 'slim-rails'
 gem 'devise'
 
 group :development, :test do
-  gem 'byebug'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'database_rewinder'
+  gem 'launchy'
+  gem 'selenium-webdriver'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-
   gem 'letter_opener_web'
+  gem 'pry-rails'
 end
 
