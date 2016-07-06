@@ -69,6 +69,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    dummy_text_jp (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
     factory_girl (4.7.0)
@@ -232,6 +233,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   database_rewinder
   devise
+  dummy_text_jp
   factory_girl_rails
   faker
   jbuilder (~> 2.0)

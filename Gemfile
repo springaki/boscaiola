@@ -19,10 +19,11 @@ gem 'devise'
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'dummy_text_jp'
 end
 
 group :test do
-  gem 'faker'
   gem 'capybara'
   gem 'database_rewinder'
   gem 'launchy'
