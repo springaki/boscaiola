@@ -2,6 +2,8 @@ require 'rails_helper'
 
 feature 'Users spec' do
 
+  # let!(:user){ create(:user) }
+
   scenario 'トップページが表示されること' do
     visit root_path
     expect(page).to have_http_status :ok
@@ -18,9 +20,9 @@ feature 'Users spec' do
   end
 
   scenario 'ログインした場合、ユーザの一覧ページへリダイレクトすること' do
-    user = sign_in_as_new_user
+    user = create(:user)
+    sign_in_as_new_user user
     expect(page).to have_content 'Signed in successfully'
-    save_and_open_page
     expect(current_path).to eq home_path
     expect(page).to have_content user.email
   end
