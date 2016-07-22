@@ -24,15 +24,17 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '~> 2.4.4'
   gem 'database_rewinder'
   gem 'launchy'
-  gem 'selenium-webdriver'
+  gem 'poltergeist'
+  gem 'timecop'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'letter_opener_web'
   gem 'pry-rails'
 end
