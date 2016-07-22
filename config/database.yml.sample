@@ -1,0 +1,31 @@
+development: &development
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: dmetlabel_development
+  host: 192.168.59.103 # `boot2docker ip`
+  pool: 5
+  username: postgres
+  password: mysecretpassword
+
+production:
+  <<: *development
+
+#development:
+#  adapter: sqlite3
+#  database: db/development.sqlite3
+#  pool: 5
+#  timeout: 5000
+
+test: &test
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: dmetlabel_test
+  host: 192.168.59.103 # `boot2docker ip`
+  pool: 5
+  username: root
+  password: password
+
+cucumber:
+  <<: *test
