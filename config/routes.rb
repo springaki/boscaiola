@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :posts
   root to: redirect('/home')
 
   get 'home', to: 'home#show'
