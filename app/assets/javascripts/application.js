@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require_tree ../../../vendor/assets/eThemes-freebie-Enzyme/js
 //= require_tree .

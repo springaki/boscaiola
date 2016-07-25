@@ -1,21 +1,27 @@
-h1 Listing posts
-
-table
-  thead
-    tr
-      th Description
-      th
-      th
-      th
-
-  tbody
-    - @posts.each do |post|
-      tr
-        td = post.description
-        td = link_to 'Show', post
-        td = link_to 'Edit', edit_post_path(post)
-        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Post', new_post_path
+.container
+  .twelve.columns
+    .blog.style-4
+      - @posts.each do |post|
+        .border
+          .meta
+            p = post.created_at
+          img.scale-with-grid src="#{asset_path 'portfolio-large-mnt.jpg'}"
+          a.link href="blog-post.html"
+        .description
+          h5
+            a href="blog-single.html"  Standard Blog Post
+          .info
+            | POSTED BY:
+            a href="#"  SupremeGeneral
+            span \
+            | COMMENTS:
+            a href="#"  2 Comments
+            span \
+            | CATS:
+            a href="#"  Category 1
+          p = post.description
+          a href=post_path(post)
+            span More
+          a href=edit_post_path(post)
+            span Edit
+        .clear
